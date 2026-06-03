@@ -1,0 +1,32 @@
+{
+  "name": "tronsave/sdk",
+  "description": "Fully-typed PHP SDK for the Tronsave v2 API (TRON Energy & Bandwidth).",
+  "type": "library",
+  "license": "MIT",
+  "keywords": ["tron", "tronsave", "energy", "bandwidth", "sdk"],
+  "homepage": "https://github.com/tronsave/tronsave-sdk",
+  "require": {
+    "php": ">=8.1",
+    "ext-json": "*",
+    "psr/http-client": "^1.0",
+    "psr/http-factory": "^1.0",
+    "psr/http-message": "^1.1 || ^2.0",
+    "guzzlehttp/guzzle": "^7.5"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "autoload": {
+    "psr-4": { "Tronsave\\": "src/" },
+    "classmap": ["src/Enums.php", "src/Exceptions.php", "src/Models.php"]
+  },
+  "autoload-dev": {
+    "psr-4": { "Tronsave\\Tests\\": "tests/" }
+  },
+  "scripts": {
+    "test": "phpunit"
+  },
+  "config": {
+    "sort-packages": true
+  }
+}
